@@ -1,0 +1,160 @@
+
+.o_thread_window {
+  z-index: 1002; // to go over the navbar
+  .o_thread_date_separator {
+    display: none;
+  }
+
+  .o_livechat_prequestion {
+    /* Livechat Rating : feedback smiley */
+    flex: 1 1 auto;
+    overflow: auto;
+    padding: 15px;
+    font-size: 14px;
+
+    .o_livechat_prequestion_email {
+      font-size: 14px;
+      font-weight: bold;
+      border-radius:1px;
+
+
+      > div {
+        padding: 5px 0;
+      }
+    }
+
+    .o_livechat_no_feedback {
+      text-decoration: underline;
+      cursor: pointer;
+      margin: 20px 0;
+    }
+
+    .o_livechat_prequestion_box {
+      margin: 0;
+    }
+
+    .o_livechat_rating_choices {
+      margin: 10px 0;
+
+      > img {
+        width: 65px;
+        opacity: 0.60;
+        cursor: pointer;
+        margin: 10px;
+
+        &:hover, &.selected {
+          opacity: 1;
+        }
+      }
+    }
+
+    /* feedback reason */
+    .o_livechat_rating_reason {
+      margin: 10px 0;
+      display: none; /* hidden by default */
+
+      > textarea {
+        width: 100%;
+        height: 70px;
+        resize: none;
+      }
+    }
+  }
+
+  .o_thread_window_header {
+    display: flex;
+    flex: 0 0 auto;
+    color: white;
+    padding: $o-mail-chatter-gap*0.5 $o-mail-chatter-gap;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid gray('300');
+    background-color: #F08748;
+    padding: 5px 10px;
+    height: 50px;
+
+    .o_thread_window_title {
+      direction: ltr;
+      font-size: 14px;
+    }
+
+
+  }
+
+textarea {
+            resize: none;
+        }
+}
+.o_start_chatting_button{
+    background-color: #eea174;
+    border-color: #e8a177;
+    color: #fcfcfc;
+}
+.text-muted_button {
+  color: white;
+}
+.start_chatting_button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f08748;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.start_chatting_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.start_chatting_button span:after {
+  content: '\f1d8';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.start_chatting_button:hover span {
+  background-color: #f4511e;
+  padding-right: 5px;
+
+}
+.start_chatting_button:hover {
+  background-color: #f4511e;
+  padding-right: 5px;
+}
+.was-validated .form-control:invalid, .form-control.is-invalid {
+  border: 1px solid #dc3545;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dc3545' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center right calc(0.375em + 0.1875rem);
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+.o_livechat_prequestion_email .form-control{
+  outline: none;
+}
+.o_pre_message{
+  outline: none;
+}
+.o_livechat_rating .o_livechat_email{
+  display: none;
+}
+.o_livechat_rating_choices img {
+    display: inline-block;
+    margin: 0 5px;
+    max-width: 50px;
+}
+.o_livechat_rating_reason_button > input {
+      display: inline-block;   /* this shouldn't be needed on a button though */
+      width: 100%;
+    }

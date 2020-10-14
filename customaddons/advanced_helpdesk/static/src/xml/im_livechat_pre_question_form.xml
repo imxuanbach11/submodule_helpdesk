@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+    <t t-name="advanced_helpdesk.PreQuestion">
+        <div class="o_livechat_prequestion">
+            <div class="o_livechat_prequestion_box">
+                <div class="o_livechat_rating_feedback_text">
+                    Hi, may I help you?
+                </div>
+            </div>
+            <h3 class="text-muted">Introduce yourself *</h3>
+            <div class="o_livechat_prequestion_email">
+                <span class="text-muted">Email *</span>
+                <div class="input-group">
+                    <input id="o_pre_email" type="email" class="form-control" placeholder="Email" style="width: 100%;"/>
+                </div>
+            </div>
+            <div class="o_livechat_prequestion_email">
+                <span class="text-muted">Phone Number</span>
+                <div class="input-group mb-3">
+                    <input id="o_pre_phone" type="phone" class="form-control mb-3" placeholder="Phone" style="width: 100%;"/>
+                </div>
+            </div>
+            <div class="o_livechat_prequestion_email">
+                <span class="text-muted">Departments</span>
+                <div class="input-group o_input_group">
+                    <select id="o_pre_department" type="text" class="form-control" style="width: 100%;">
+                        <option value="Sales">Sales</option>
+                        <option value="Tech">Tech</option>
+                    </select>
+                </div>
+            </div>
+            <div class="o_livechat_prequestion_email">
+                <span class="text-muted">Order ID</span>
+                <div class="input-group">
+                    <input id="o_pre_order_id" type="text" class="form-control" placeholder="If you have purchased a service from us" style="width: 100%;"/>
+                </div>
+            </div>
+            <div class="o_livechat_prequestion_email">
+                <span class="text-muted">Messages *</span>
+                <div class="input-group">
+                    <textarea id="o_pre_message" placeholder="Explain your note"></textarea>
+                </div>
+            </div>
+            <div style="text-align:center;">
+                <button type="submit" class="o_email_chat_button start_chatting_button btn btn-primary" style="vertical-align:middle">
+<!--                <button type="submit" class="btn btn-primary rounded-0 text-center">-->
+                <span class="text-muted_button">Start chatting</span>
+            </button>
+            </div>
+
+        </div>
+    </t>
+<!--    <t t-extend="mail.AbstractThreadWindow.HeaderContent">-->
+<!--&lt;!&ndash;        <t t-jquery=".!widget.isMobile()" t-operation="prepend">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a href="#" class="o_thread_window_expand fa fa-expand" t-att-title="expandTitle" t-att-aria-label="expandTitle"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        </t>&ndash;&gt;-->
+<!--&lt;!&ndash;        <span t-if="!widget.isMobile()" class="o_thread_window_buttons">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a href="#" class="o_thread_window_close fa fa-times-circle"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        </span>&ndash;&gt;-->
+<!--        <t t-jquery=".o_thread_window_buttons" t-operation="replace">-->
+<!--            <span t-if="!widget.isMobile()" class="o_thread_window_buttons">-->
+<!--            <a href="#" class="o_thread_window_close fa fa-times-circle"/>-->
+<!--        </span>-->
+<!--        </t>-->
+<!--    </t>-->
+
+</templates>

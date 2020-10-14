@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mail_channel_view_tree_inherit" model="ir.ui.view">
+            <field name="name">mail.channel.view.tree</field>
+            <field name="model">mail.channel</field>
+            <field name="inherit_id" ref="im_livechat.mail_channel_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='create_date']" position="after">
+                    <!-- Add new fields here -->
+                    <field name="visitor_info"/>
+                    <field name="livechat_stage"/>
+                    <field name="livechat_operator_id"/>
+                </xpath>
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="decoration-success">livechat_stage=='done'</attribute>
+                    <attribute name="decoration-info">livechat_stage=='in_progress'</attribute>
+<!--                    <attribute name="readonly">1</attribute>-->
+                </xpath>
+            </field>
+        </record>
+        <record id="mail_channel_view_form_inherit" model="ir.ui.view">
+            <field name="name">mail.channel.view.form.inherit</field>
+            <field name="model">mail.channel</field>
+            <field name="inherit_id" ref="im_livechat.mail_channel_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button string="Chat" class="btn btn-primary o_advanced_helpdesk_visitor_chat_btn"/>
+<!--                        <button name="action_done" type="object" string="Mark done" class="btn btn-primary"-->
+<!--                                attrs="{'invisible': [('is_done','=',True)]}"/>-->
+                        <field name="livechat_stage" widget="statusbar" options="{'clickable': '1'}"/>
+<!--                        <field name="is_done" invisible="1"/>-->
+                    </header>
+                    <!-- Add your fields or attributes here -->
+                </xpath>
+                <xpath expr="//form" position="attributes">
+                    <attribute name="js_class">advanced_helpdesk_mail_channel_form</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

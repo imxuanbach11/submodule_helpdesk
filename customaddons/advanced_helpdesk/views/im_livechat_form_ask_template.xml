@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="im_livechat_custom_pre_question_form_tracking" name="im_livechat_custom_pre_question_form_tracking"
+              inherit_id="im_livechat.external_lib">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/advanced_helpdesk/static/src/js/im_livechat_form_ask.js"/>
+            <link rel="stylesheet" type="text/scss"
+                  href="/advanced_helpdesk/static/src/scss/custom_livechat_css.scss"></link>
+        </xpath>
+    </template>
+    <template id="assets_backend" name="livechat assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/advanced_helpdesk/static/src/js/chat_livechat.js"/>
+        </xpath>
+    </template>
+</odoo>
